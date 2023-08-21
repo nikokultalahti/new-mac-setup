@@ -20,7 +20,6 @@ mas install 1289583905                  # Pixelmator Pro
 mas install 775737590                   # iA Writer
 mas install 1474335294                  # Goodlinks
 mas install 747648890                   # Telegram
-mas install 937984704                   # Amphetamine
 mas install 1440147259                  # Adguard
 
 # Install Safari Extensions
@@ -42,5 +41,6 @@ brew install --cask raycast             # Raycast
 brew install --cask sony-ps-remote-play # PS Remote Play
 brew install --cask vnc-viewer          # VNC Viewer
 brew install --cask mullvadwpn          # Mullvad VPN
+brew install --cask applite             # GUI for Homebrew
 
 # Other Apps
