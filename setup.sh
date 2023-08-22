@@ -32,7 +32,6 @@ mas install 1494051017                  # SimpleLogin
 # Install Non-App Store Apps
 # List of all available Casks on Homebrew website: https://formulae.brew.sh/cask/
 
-brew install --cask iterm2              # iTerm2
 brew install --cask netnewswire         # NetNewsWire
 brew install --cask signal              # Signal
 brew install --cask vscodium            # VS Code without telemetry
