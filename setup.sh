@@ -41,5 +41,6 @@ brew install --cask sony-ps-remote-play # PS Remote Play
 brew install --cask vnc-viewer          # VNC Viewer
 brew install --cask mullvadwpn          # Mullvad VPN
 brew install --cask applite             # GUI for Homebrew
+brew install --cask docker              # Docker Desktop
 
 # Other Apps
