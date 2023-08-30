@@ -38,9 +38,9 @@ brew install --cask signal              # Signal
 brew install --cask vscodium            # VS Code without telemetry
 brew install --cask calibre             # Calibre
 brew install --cask raycast             # Raycast
-brew install --cask sony-ps-remote-play # PS Remote Play
 brew install --cask vnc-viewer          # VNC Viewer
 brew install --cask mullvadwpn          # Mullvad VPN
 brew install --cask applite             # GUI for Homebrew
+brew install --cask iterm2              # iTerm2
 
 # Other Apps
