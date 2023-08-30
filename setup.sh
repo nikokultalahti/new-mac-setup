@@ -6,7 +6,7 @@
 
 brew install mas                        # For App Store Automation
 brew install git                        # Git 
-brew install bitwarden-cli              # Command-line tools for Bitwarden
+brew install bitwarden-cli              # Command-line tools for Bitwarden (for Raycast integration)
 brew install ssh-copy-id                # Add a public key to a remote machine's authorized_keys file
 
 # Install App Store apps
@@ -21,6 +21,7 @@ mas install 775737590                   # iA Writer
 mas install 1474335294                  # Goodlinks
 mas install 747648890                   # Telegram
 mas install 1440147259                  # Adguard
+mas install 1475387142                  # Tailscale
 
 # Install Safari Extensions
 
@@ -41,6 +42,5 @@ brew install --cask sony-ps-remote-play # PS Remote Play
 brew install --cask vnc-viewer          # VNC Viewer
 brew install --cask mullvadwpn          # Mullvad VPN
 brew install --cask applite             # GUI for Homebrew
-brew install --cask docker              # Docker Desktop
 
 # Other Apps
