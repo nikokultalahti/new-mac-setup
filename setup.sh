@@ -7,7 +7,9 @@
 brew install mas                        # For App Store Automation
 brew install git                        # Git 
 brew install bitwarden-cli              # Command-line tools for Bitwarden (for Raycast integration)
-brew install ssh-copy-id                # Add a public key to a remote machine's authorized_keys file
+brew install zsh-syntax-highlighting    # Syntax highlightning for zsh
+brew install zsh-autosuggestions        # Autosuggestions for zsh
+
 
 # Install App Store apps
 
@@ -43,3 +45,11 @@ brew install --cask mullvadwpn          # Mullvad VPN
 brew install --cask iterm2              # iTerm2
 
 # Other Apps
+
+ruby gem install colorls                # Colorls for iTerm2 & ZSH
+
+# Configurations
+echo "source $HOMEBREW_PREFIX/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh # Enable syntax highlighting" > ~/.zshrc
+echo "source $HOMEBREW_PREFIX/share/zsh-autosuggestions/zsh-autosuggestions.zsh # Enable autosuggestions" > ~/.zshrc
+echo "alias ls=colorls" > ~/.zshrc
+
