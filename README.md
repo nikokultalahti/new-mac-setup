@@ -1,5 +1,5 @@
-#Instructions
+# This is personal list of apps to install & configs to change for new laptop setup
 
-## Run
+## Instructions
 
-zsh setup.sh
+Work in Progress
