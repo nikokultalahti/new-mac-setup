@@ -1,5 +1,3 @@
-# This is personal list of apps to install & configs to change for new laptop setup
+# This is my personal list of apps to install & configs to change for new laptop setup
 
-## Instructions
-
-Work in Progress
+This is a work-in-progress and gets updated whenever I change apps/tools that I use.

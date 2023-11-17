@@ -29,8 +29,7 @@ mas install 409203825                   # Subtrack
 mas install 1659154653                  # Mona for Mastodon
 mas install 1289583905                  # Pixelmator Pro
 mas install 775737590                   # iA Writer
-mas install 1032670789                  # NewsExplorer
-mas install 1474335294                  # Goodlinks
+mas install 1529448980                  # Reeder 5
 mas install 1006087419                  # SnippetsLab
 mas install 747648890                   # Telegram
 mas install 1440147259                  # Adguard
@@ -51,13 +50,4 @@ brew install --cask calibre             # Calibre
 brew install --cask raycast             # Raycast
 brew install --cask mullvadwpn          # Mullvad VPN
 brew install --cask iterm2              # iTerm2
-
-# Other Apps
-
-ruby gem install colorls                # Colorls for iTerm2 & ZSH
-
-# For Work
-
-mas install 803453959                   # Slack
-mas install 1298450641                  # monday.com
-
+brew install --cask arq                 # Arq 7
