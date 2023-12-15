@@ -34,6 +34,7 @@ mas install 1006087419                  # SnippetsLab
 mas install 747648890                   # Telegram
 mas install 1440147259                  # Adguard
 mas install 1475387142                  # Tailscale
+mas install
 
 # Install Safari Extensions
 
@@ -50,4 +51,5 @@ brew install --cask calibre             # Calibre
 brew install --cask raycast             # Raycast
 brew install --cask mullvadwpn          # Mullvad VPN
 brew install --cask iterm2              # iTerm2
-brew install --cask arq                 # Arq 7
+brew install --cask iina                # IINA
+brew install --cask 1password           # 1Password
