@@ -55,7 +55,7 @@ mas install 6446224821                  # StreetPass for Mastodon
 # Install Non-App Store Apps
 
 brew install --cask signal              # Signal
-brew install --cask vscodium            # VS Code without telemetry
+brew install --cask visual-studio-code  # VS Code
 brew install --cask calibre             # Calibre
 brew install --cask raycast             # Raycast
 brew install --cask mullvadwpn          # Mullvad VPN
