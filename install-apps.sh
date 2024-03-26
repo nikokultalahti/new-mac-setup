@@ -70,5 +70,6 @@ brew install --cask keyclu              # KeyClu
 brew install --cask logi-options-plus   # Logi Options+
 brew install --cask meetingbar          # MeetingBar
 brew install --cask netnewswire         # NetNewsWire
-brew install --postman                  # Postman  
-brew install --pycharm-ce               # Pycharm
+brew install --cask app-cleaner         # AppCleaner
+brew install --cask postman             # Postman  
+brew install --cask pycharm-ce          # Pycharm
