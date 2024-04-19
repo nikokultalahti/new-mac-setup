@@ -1,25 +1,76 @@
 #!/bin/sh
 
-# OS Settings
-defaults write com.apple.TextEdit RichText -int 0 # Start TextEdit in plain text mode
+# OS SETTINGS
 
-defaults write com.apple.finder ShowRecentTags -bool false # Hide recent tags
+# Start TextEdit in plain text mode
+defaults write com.apple.TextEdit RichText -int 0 
 
-defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool false # Disable autocorrect smart-quotes
-defaults write NSGlobalDomain NSAutomaticDashSubstitutionEnabled -bool false  # Disable autocorrect smart-dashes
+# Disable autocorrect smart-quotes and smart-dashes
+defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool false 
+defaults write NSGlobalDomain NSAutomaticDashSubstitutionEnabled -bool false
 
-defaults -currentHost write com.apple.ImageCapture disableHotPlug -bool true # Prevent Photos from opening when iPhone is connected
+# Prevent Photos from opening when iPhone is connected
+defaults -currentHost write com.apple.ImageCapture disableHotPlug -bool true 
 
-defaults write com.apple.dock "show-recents" -int 0 # Hide recent applications from dock (applied after reboot or killall dock)
+# Hide recent applications from dock (applied after reboot or killall dock)
+defaults write com.apple.dock "show-recents" -int 0 
 
-sudo /usr/libexec/ApplicationFirewall/socketfilterfw --setglobalstate on # Turn on firewall
+# Ask for password as soon as screensaver starts
+defaults write com.apple.screensaver askForPassword -int 1
+defaults write com.apple.screensaver askForPasswordDelay -int 0 
 
-# Mail
-defaults write com.apple.mail DisableInlineAttachmentViewing -bool true # View attachments as icons
+# Turn on firevall
+sudo /usr/libexec/ApplicationFirewall/socketfilterfw --setglobalstate on
 
-# Safari
-defaults write com.apple.Safari AutoOpenSafeDownloads -bool false  # Disable auto-opening of downloads
-defaults write com.apple.Safari CanPromptForPushNotifications -bool false # Prevent websites from asking for push notifications
-defaults write com.apple.Safari NewTabBehavior -int 1 # New tabs open in empty page
-defaults write com.apple.Safari ShowOverlayStatusBar -bool true # Always show status bar in bottom left corner
+# Don't default to saving documents to iCloud
+defaults write NSGlobalDomain NSDocumentSaveNewDocumentsToCloud -bool true
+
+# Disable crash reporter
+defaults write com.apple.CrashReporter DialogType None
+
+# FINDER
+
+# Show path bar
+defaults write com.apple.Finder ShowPathbar -bool true
+
+# Show status bar
+defaults write com.apple.Finder ShowStatusBar -bool true
+
+# Expose hidden files and Library folder in Finder
+defaults write com.apple.finder AppleShowAllFiles -bool true
+chflags nohidden ~/Library
+
+# Show external hard drives on desktop
+defaults write com.apple.Finder ShowExternalHardDrivesOnDesktop -bool true
+
+# Show removable media on desktop
+defaults write com.apple.Finder ShowRemovableMediaOnDesktop -bool true
+
+# Show all filename extensions
+defaults write NSGlobalDomain AppleShowAllExtensions -bool true
+
+# Hide recent tags
+defaults write com.apple.finder ShowRecentTags -bool false
+
+
+
+# MAIL
+
+# View attachments as icons
+defaults write com.apple.mail DisableInlineAttachmentViewing -bool true 
+
+# SAFARI
+
+# Disable auto-opening of downloads
+defaults write com.apple.Safari AutoOpenSafeDownloads -bool false  
+
+# New tabs open in empty page
+defaults write com.apple.Safari NewTabBehavior -int 1 
+
+# Always show status bar in bottom left corner
+defaults write com.apple.Safari ShowOverlayStatusBar -bool true 
+
+# Show bookmarks bar
+defaults write com.apple.Safari ShowFavoritesBar -bool true
+
 
