@@ -1,15 +1,25 @@
-#!/bin/sh
+#!/usr/bin/env
 
-# Install Command Line tools without Xcode
-code-select --install
+# Install Homebrew, command-line tools, applications and development tools.
 
-# Install Homebrew
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+# Ask for the administrator password upfront.
+sudo -v
 
-    # Homebrew not automatically on PATH for Apple Silicon
-    if [[ $(arch) == "arm64" ]] && ! command -v brew; then
-        eval $("/opt/homebrew/bin/brew" shellenv)
-    fi
+# Keep-alive: update existing `sudo` time stamp until the script has finished.
+while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
+
+# Check for Homebrew,
+# Install if we don't have it
+if test ! $(which brew); then
+  echo "Installing homebrew..."
+  ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+fi
+
+# Make sure we’re using the latest Homebrew.
+brew update
+
+# Upgrade any already-installed formulae.
+brew upgrade --all
 
 # Turn off Hombrew analytics
 brew analytics off
@@ -17,11 +27,11 @@ brew analytics off
 # Install CLI tools
 
 brew install git                        # Git 
-brew install nvm                        # Node version manager
-brew install mas                        # For App Store Automation
+brew install mas                        # App Store Automation
 brew install 1password-cli              # Command-line tools for 1Password
 brew install zsh-syntax-highlighting    # Syntax highlightning for zsh
 brew install zsh-autosuggestions        # Autosuggestions for zsh
+brew install ssh-copy-id
 
 # Install App Store apps
 
@@ -38,7 +48,6 @@ mas install 1440147259                  # Adguard
 mas install 1496543317                  # Book Tracker
 mas install 1471867429                  # OTP Auth
 mas install 1474335294                  # GoodLinks
-
 
 # Install Safari Extensions
 
@@ -62,3 +71,12 @@ brew install --cask netnewswire         # NetNewsWire
 brew install --cask appcleaner          # AppCleaner
 brew install --cask pycharm-ce          # Pycharm
 brew install --cask rapidapi		    # Rapid Api
+
+# Install Python
+brew install python
+brew install python3
+
+# Install Node
+brew install nvm                        # Node version manager
+
+# Remove outdated versions from the Homebrew cellar.
