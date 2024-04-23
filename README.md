@@ -6,9 +6,13 @@ The other sets up some MacOS system settings while the other installs apps that 
 This is a work-in-progress and gets updated whenever I change apps/tools that I use.
 
 TODO:
-- Set themes for applications
-- Instaa ZFS Plugins
+- Set themes for applications (iTerm2, VSCode)
+- Install MesloLGS NF Font Family
 - Set which items to show / hide in menu bar
+- Include dot files
+    - gitignore
+    - zsfhrc
+    - gitconfig
 
 Credits:
 https://github.com/donnemartin/dev-setup?tab=readme-ov-file#bootstrapsh-script

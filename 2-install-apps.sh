@@ -8,6 +8,12 @@ sudo -v
 # Keep-alive: update existing `sudo` time stamp until the script has finished.
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
+echo "Starting to install applications... This may take a while."
+
+###############################################################################
+# Homebrew                                                              #
+###############################################################################
+
 # Check for Homebrew,
 # Install if we don't have it
 if test ! $(which brew); then
@@ -15,25 +21,29 @@ if test ! $(which brew); then
   ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 fi
 
+# Add Homebrew to PATH
+echo "export PATH=/opt/homebrew/bin:$PATH" >> ~/.zshrc
+
 # Make sure we’re using the latest Homebrew.
 brew update
 
 # Upgrade any already-installed formulae.
 brew upgrade --all
 
-# Turn off Hombrew analytics
-brew analytics off
-
-# Install CLI tools
+###############################################################################
+# CLI Tools                                                                   #
+###############################################################################
 
 brew install git                        # Git 
 brew install mas                        # App Store Automation
 brew install 1password-cli              # Command-line tools for 1Password
 brew install zsh-syntax-highlighting    # Syntax highlightning for zsh
 brew install zsh-autosuggestions        # Autosuggestions for zsh
-brew install ssh-copy-id
+brew install powerlevel10k              # Theme for ZSH
 
-# Install App Store apps
+###############################################################################
+# App Store Applications                                                      #
+###############################################################################
 
 mas install 409201541                   # Pages
 mas install 409203825                   # Numbers
@@ -49,14 +59,18 @@ mas install 1496543317                  # Book Tracker
 mas install 1471867429                  # OTP Auth
 mas install 1474335294                  # GoodLinks
 
-# Install Safari Extensions
+###############################################################################
+# Safari Extensions                                                           #
+###############################################################################
 
 mas install 1606897889                  # Consent-O-Matic
 mas install 1494051017                  # SimpleLogin
 mas install 1569813296                  # 1Password for Safari
 mas install 1514703160                  # Focus for Youtube
 
-# Install Non-App Store Apps
+###############################################################################
+# Homebrew Casks                                                              #
+###############################################################################
 
 brew install --cask signal              # Signal
 brew install --cask visual-studio-code  # VS Code
@@ -70,13 +84,17 @@ brew install --cask arq                 # Arq Backup7
 brew install --cask netnewswire         # NetNewsWire
 brew install --cask appcleaner          # AppCleaner
 brew install --cask pycharm-ce          # Pycharm
-brew install --cask rapidapi		    # Rapid Api
+brew install --cask rapidapi		        # Rapid Api
+
+###############################################################################
+# Development Tools                                                           #
+###############################################################################
 
 # Install Python
-brew install python
-brew install python3
-
-# Install Node
+brew install python3                    # Python
 brew install nvm                        # Node version manager
 
 # Remove outdated versions from the Homebrew cellar.
+brew cleanup
+
+echo "Done. Note that some of these changes require a logout/restart of your OS to take effect.  At a minimum, be sure to restart your Terminal."
