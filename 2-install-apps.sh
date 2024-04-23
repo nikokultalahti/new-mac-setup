@@ -23,6 +23,7 @@ fi
 
 # Add Homebrew to PATH
 echo "export PATH=/opt/homebrew/bin:$PATH" >> ~/.zshrc
+echo "export PATH=/usr/local/bin:/usr/local/sbin:~/bin:$PATH" >> ~/.zshrc
 
 # Make sure we’re using the latest Homebrew.
 brew update
