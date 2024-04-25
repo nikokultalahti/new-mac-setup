@@ -9,10 +9,13 @@ TODO:
 - Set themes for applications (iTerm2, VSCode)
 - Install MesloLGS NF Font Family
 - Set which items to show / hide in menu bar
-- Include dot files
-    - gitignore
-    - zsfhrc
-    - gitconfig
+- Include .dot files
+    - git (config, gitignore)
+    - ZSH
+    - p10k
+    - .hushlogin
+    - VS Code
+    - iTerm2
 
 Credits:
 https://github.com/donnemartin/dev-setup?tab=readme-ov-file#bootstrapsh-script
