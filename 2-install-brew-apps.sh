@@ -45,25 +45,26 @@ brew install powerlevel10k              # Theme for ZSH
 ###############################################################################
 
 brew install --cask signal              # Signal
-brew install --cask visual-studio-code  # VS Code
+brew install --cask vscodium            # VS Code withouth telemetry
 brew install --cask calibre             # Calibre
 brew install --cask raycast             # Raycast
 brew install --cask mullvadvpn          # Mullvad VPN
 brew install --cask iterm2              # iTerm2
 brew install --cask 1password           # 1Password
 brew install --cask cleanshot           # CleanShotX
-brew install --cask arq                 # Arq Backup7
 brew install --cask netnewswire         # NetNewsWire
 brew install --cask appcleaner          # AppCleaner
 brew install --cask pycharm-ce          # Pycharm
 brew install --cask rapidapi		        # Rapid Api
+brew install --cask synology-drive      # Synology Drive
+brew install --cask joplin              # Joplin
+brew install --cask firefox             # Firefox
 
 ###############################################################################
 # Install development tools                                                   #
 ###############################################################################
 
 brew install python3                    # Python
-brew install nvm                        # Node version manager
 
 # Remove outdated versions from the Homebrew cellar.
 brew cleanup
