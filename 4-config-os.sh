@@ -83,10 +83,6 @@ defaults write com.apple.AppleMultitouchTrackpad ActuateDetents 0
 # Disable “natural” scrolling
 defaults write NSGlobalDomain com.apple.swipescrolldirection -bool false
 
-# Enable full keyboard access for all controls
-# (e.g. enable Tab in modal dialogs)
-defaults write NSGlobalDomain AppleKeyboardUIMode -int 3
-
 # Disable press-and-hold for keys in favor of key repeat
 defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
 
@@ -166,20 +162,7 @@ defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
 defaults write NSGlobalDomain com.apple.springing.enabled -bool true
 
 # Tweak the spring loading delay for directories
-defaults write NSGlobalDomain com.apple.springing.delay -float .1
-
-# Automatically open a new Finder window when a volume is mounted
-defaults write com.apple.frameworks.diskimages auto-open-ro-root -bool true
-defaults write com.apple.frameworks.diskimages auto-open-rw-root -bool true
-defaults write com.apple.finder OpenWindowForNewRemovableDisk -bool true
-
-# Show item info near icons on the desktop and in other icon views
-/usr/libexec/PlistBuddy -c "Set :DesktopViewSettings:IconViewSettings:showItemInfo true" ~/Library/Preferences/com.apple.finder.plist
-/usr/libexec/PlistBuddy -c "Set :FK_StandardViewSettings:IconViewSettings:showItemInfo true" ~/Library/Preferences/com.apple.finder.plist
-/usr/libexec/PlistBuddy -c "Set :StandardViewSettings:IconViewSettings:showItemInfo true" ~/Library/Preferences/com.apple.finder.plist
-
-# Show item info at the bottom of the icons on the desktop
-/usr/libexec/PlistBuddy -c "Set DesktopViewSettings:IconViewSettings:labelOnBottom true" ~/Library/Preferences/com.apple.finder.plist
+# defaults write NSGlobalDomain com.apple.springing.delay -float .1
 
 # Enable snap-to-grid for icons on the desktop and in other icon views
 /usr/libexec/PlistBuddy -c "Set :DesktopViewSettings:IconViewSettings:arrangeBy grid" ~/Library/Preferences/com.apple.finder.plist
@@ -200,14 +183,7 @@ defaults write com.apple.finder EmptyTrashSecurely -bool true
 chflags nohidden ~/Library
 
 # Show the /Volumes folder
-sudo chflags nohidden /Volumes
-
-# Expand the following File Info panes:
-# “General”, “Open with”, and “Sharing & Permissions”
-#defaults write com.apple.finder FXInfoPanesExpanded -dict \
-#	General -bool true \
-#	OpenWith -bool true \
-#	Privileges -bool true
+# sudo chflags nohidden /Volumes
 
 ###############################################################################
 # Dock, Dashboard, and hot corners                                            #
@@ -261,7 +237,7 @@ defaults write com.apple.dock mru-spaces -bool false
 defaults write com.apple.dock autohide-delay -float 0
 
 # Spee up the animation when hiding/showing the Dock
-defaults write com.apple.dock autohide-time-modifier -float .1
+# defaults write com.apple.dock autohide-time-modifier -float .1
 
 # Always show Dock
 defaults write com.apple.dock autohide -bool false
@@ -338,16 +314,13 @@ defaults write com.apple.Safari IncludeInternalDebugMenu -bool true
 # Make Safari’s search banners default to Contains instead of Starts With
 defaults write com.apple.Safari FindOnPageMatchesWordStartsOnly -bool false
 
-# Remove useless icons from Safari’s bookmarks bar
-# defaults write com.apple.Safari ProxiesInBookmarksBar "()"
-
 # Enable the Develop menu and the Web Inspector in Safari
-# defaults write com.apple.Safari IncludeDevelopMenu -bool true
-# defaults write com.apple.Safari WebKitDeveloperExtrasEnabledPreferenceKey -bool true
-# defaults write com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebKit2DeveloperExtrasEnabled -bool true
+defaults write com.apple.Safari IncludeDevelopMenu -bool true
+defaults write com.apple.Safari WebKitDeveloperExtrasEnabledPreferenceKey -bool true
+defaults write com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebKit2DeveloperExtrasEnabled -bool true
 
 # Add a context menu item for showing the Web Inspector in web views
-# defaults write NSGlobalDomain WebKitDeveloperExtras -bool true
+defaults write NSGlobalDomain WebKitDeveloperExtras -bool true
 
 # Warn about fraudulent websites
 defaults write com.apple.Safari WarnAboutFraudulentWebsites -bool true
@@ -421,7 +394,7 @@ defaults write com.apple.TimeMachine DoNotOfferNewDisksForBackup -bool true
 defaults write com.apple.ActivityMonitor OpenMainWindow -bool true
 
 # Visualize CPU usage in the Activity Monitor Dock icon
-defaults write com.apple.ActivityMonitor IconType -int 5
+# defaults write com.apple.ActivityMonitor IconType -int 5
 
 # Show all processes in Activity Monitor
 defaults write com.apple.ActivityMonitor ShowCategory -int 0
