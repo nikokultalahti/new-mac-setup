@@ -34,12 +34,6 @@ sudo /usr/libexec/ApplicationFirewall/socketfilterfw --setglobalstate on
 sudo /usr/libexec/ApplicationFirewall/socketfilterfw --setloggingmode on
 sudo /usr/libexec/ApplicationFirewall/socketfilterfw --setstealthmode on
 
-# Disable the sound effects on boot
-# sudo nvram SystemAudioVolume=" "
-
-# Set sidebar icon size to medium
-defaults write NSGlobalDomain NSTableViewDefaultSizeMode -int 2
-
 # Show scrollbars on scrolling, possible values: `WhenScrolling`, `Automatic` and `Always`
 defaults write NSGlobalDomain AppleShowScrollBars -string "WhenScrolling"
 
@@ -78,16 +72,12 @@ defaults write com.apple.screencapture location -string "${HOME}/Desktop"
 # Save screenshots in PNG format (other options: BMP, GIF, JPG, PDF, TIFF)
 defaults write com.apple.screencapture type -string "png"
 
-# Disable shadow in screenshots
-defaults write com.apple.screencapture disable-shadow -bool true
-
 ###############################################################################
 # Trackpad, mouse, keyboard, Bluetooth accessories, and input                 #
 ###############################################################################
 
-# Enable tap to click for this user and for the login screen
+# Enable tap to click for this user
 defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true
-defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
 defaults write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
 
 # Disable Look up & data detectors: Tap with three fingers
@@ -155,13 +145,13 @@ defaults write com.apple.finder AppleShowAllFiles -bool true
 defaults write NSGlobalDomain AppleShowAllExtensions -bool true
 
 # Show status bar
-# defaults write com.apple.finder ShowStatusBar -bool true
+#defaults write com.apple.finder ShowStatusBar -bool true
 
 # Show path bar
 defaults write com.apple.finder ShowPathbar -bool true
 
 # Display full POSIX path as Finder window title
-# defaults write com.apple.finder _FXShowPosixPathInTitle -bool true
+#defaults write com.apple.finder _FXShowPosixPathInTitle -bool true
 
 # Keep folders on top when sorting by name
 defaults write com.apple.finder _FXSortFoldersFirst -bool true
