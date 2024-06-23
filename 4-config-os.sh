@@ -78,7 +78,7 @@ defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool
 defaults write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
 
 # Disable Look up & data detectors: Tap with three fingers
-defaults write com.apple.AppleMultitouchTrackpad ActuateDetents 0
+defaults write com.apple.AppleMultitouchTrackpad ActuateDetents -bool false
 
 # Disable “natural” scrolling
 defaults write NSGlobalDomain com.apple.swipescrolldirection -bool false
