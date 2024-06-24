@@ -61,6 +61,7 @@ brew install --cask joplin                  # Joplin
 brew install --cask firefox                 # Firefox
 brew install --cask stremio                 # Stremio
 brew install --cask iina                    # IINA
+brew install --cask rectangle               # Rectangle
 
 ###############################################################################
 # Install development tools                                                   #
