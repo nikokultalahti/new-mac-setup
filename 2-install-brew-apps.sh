@@ -66,6 +66,7 @@ brew install --cask git-credential-manager  # Git credential manager
 ###############################################################################
 
 brew install python3                    # Python
+brew install nvm                        # Node version manager
 
 # Remove outdated versions from the Homebrew cellar.
 brew cleanup
