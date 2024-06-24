@@ -59,13 +59,15 @@ brew install --cask rapidapi		            # Rapid Api
 brew install --cask synology-drive          # Synology Drive
 brew install --cask joplin                  # Joplin
 brew install --cask firefox                 # Firefox
-brew install --cask git-credential-manager  # Git credential manager
+brew install --cask stremio                 # Stremio
+brew install --cask iina                    # IINA
 
 ###############################################################################
 # Install development tools                                                   #
 ###############################################################################
 
-brew install python3                    # Python
+brew install python3                        # Python
+brew install --cask git-credential-manager  # Git credential manager
 
 # Remove outdated versions from the Homebrew cellar.
 brew cleanup
