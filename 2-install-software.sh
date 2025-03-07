@@ -34,42 +34,57 @@ brew upgrade --all
 ###############################################################################
 
 brew install git                        # Git 
-brew install mas                        # App Store Automation
-brew install 1password-cli              # Command-line tools for 1Password
+brew install starship                   # Command-line prompt
+brew install atuin                      # Shell history
+brew install chezmoi                    # Dotfile manager
+brew install eza                        # Alternative to ls
+brew install fd                         # Alternative to find
+brew install tealdeer                   # TLDR
+brew install zoxide                     # Replacement for cd
+brew install wireguard-go               # Wireguard
+brew install wireguard-tools            # Wireguard
+brew install bitwarden-cli              # Bitwarden CLI
 brew install zsh-syntax-highlighting    # Syntax highlightning for zsh
 brew install zsh-autosuggestions        # Autosuggestions for zsh
-brew install powerlevel10k              # Theme for ZSH
+brew-install --cask 1password-cli       # 1Password CLI
+
 
 ###############################################################################
-# Install Homebrew Casks                                                      #
+# Install applications and fonts                                              #
 ###############################################################################
 
-brew install --cask signal                  # Signal
-brew install --cask vscodium                # VS Code without telemetry
-brew install --cask calibre                 # Calibre
-brew install --cask raycast                 # Raycast
-brew install --cask mullvadvpn              # Mullvad VPN
-brew install --cask iterm2                  # iTerm2
-brew install --cask 1password               # 1Password
-brew install --cask cleanshot               # CleanShotX
-brew install --cask netnewswire             # NetNewsWire
-brew install --cask appcleaner              # AppCleaner
-brew install --cask pycharm-ce              # Pycharm
-brew install --cask rapidapi		            # Rapid Api
-brew install --cask synology-drive          # Synology Drive
-brew install --cask joplin                  # Joplin
-brew install --cask firefox                 # Firefox
-brew install --cask stremio                 # Stremio
-brew install --cask iina                    # IINA
-brew install --cask rectangle               # Rectangle
+brew install --cask 1password
+brew install --cask appcleaner
+brew install --cask affinity-publisher@1    
+brew install --cask bitwarden
+brew install --cask canva
+brew install --cask firefox
+brew install --cask google-chrome
+brew install --cask google-drive
+brew install --cask iterm2
+brew install --cask jetbrains-toolbox
+brew install --cask logseq
+brew install --cask mullvad VPN
+brew install --cask podman-desktop
+brew install --cask raycast
+brew install --cask rectangle
+brew install --cask slack
+brew install --cask spotify
+brew install --cask visual-studio-code
+brew install --cask font-inter
+brew install --cask font-jetbrains-mono
 
 ###############################################################################
 # Install development tools                                                   #
 ###############################################################################
 
-brew install python3                    # Python
+brew install pyenv                      # Python version manager
 brew install nvm                        # Node version manager
-brew install --cask git-credential-manager  # Git credential manager
+brew install docker
+brew install docker-compose
+brew install podman
+brew install podman-compose
+brew install --cask google-cloud-sdk
 
 # Remove outdated versions from the Homebrew cellar.
 brew cleanup

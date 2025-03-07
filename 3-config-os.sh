@@ -26,12 +26,10 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 # Set computer name (as done via System Preferences → Sharing)
 sudo scutil --set ComputerName "0x4E696B6F" # Niko
 sudo scutil --set HostName "0x4E696B6F"
-sudo scutil --set LocalHostName "0x4E696B6F"
 sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "0x4E696B6F"
 
 # Turn on firevall with logging and ghost mode
 sudo /usr/libexec/ApplicationFirewall/socketfilterfw --setglobalstate on
-sudo /usr/libexec/ApplicationFirewall/socketfilterfw --setloggingmode on
 sudo /usr/libexec/ApplicationFirewall/socketfilterfw --setstealthmode on
 
 # Show scrollbars on scrolling, possible values: `WhenScrolling`, `Automatic` and `Always`
@@ -75,6 +73,7 @@ defaults write com.apple.screencapture type -string "png"
 
 # Enable tap to click for this user
 defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true
+defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true
 defaults write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
 
 # Disable Look up & data detectors: Tap with three fingers
@@ -94,14 +93,8 @@ defaults write NSGlobalDomain InitialKeyRepeat -int 15
 # Energy saving                                                               #
 ###############################################################################
 
-# Disable lid wakeup
-sudo pmset -a lidwake 0
-
 # Sleep the display after 5 minutes
-sudo pmset -a displaysleep 5
-
-# Disable machine sleep while charging
-sudo pmset -c sleep 0
+sudo pmset -a displaysleep 5 
 
 # Set machine sleep to 10 minutes on battery
 sudo pmset -b sleep 10
